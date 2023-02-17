@@ -1,3 +1,14 @@
+# Local executables
+dut
+beacon
+
+# Java class files
+*.class
+
+# Temporary/Junk files
+*~
+*.bak
+
 # Prerequisites
 *.d
 
