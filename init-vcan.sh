@@ -7,6 +7,19 @@
 # This script is to be run by the superuser.  It loads the various CAN
 # kernel modules, then sets up a virtual loopback socketcan device
 # (vcan0) for use by applications such as "undut".
+#
+# Once the vcan0 interface is set up, one can use it in Defensics by
+# manually starting the can-injector (and disabling the built-in
+# injector.  For example:
+#
+#  python3 \
+#   /opt/Synopsys/Defensics/can-bus-1.11.0/testtool/user/can-injector.py \
+#   --socketcan --interface vcan0
+#
+# Substitute the path to the can-injector.py file as appropriate; the
+# injector version should match the version of the can-bus test suite
+# you will be using to do the fuzzing in Defensics.
+
 
 # Install the can modules - change this to suit your distro and kernel
 
